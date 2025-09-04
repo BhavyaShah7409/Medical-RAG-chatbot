@@ -19,12 +19,12 @@ export async function POST(request: NextRequest) {
     
     const retrievedContext = matches.map((match, index) => ({
       id: match.id || `context-${index}`,
-      text: match.metadata?.text || 'No content available',
+      text: String(match.metadata?.text || 'No content available'),
       score: match.score || 0,
       metadata: {
-        title: match.metadata?.title,
-        section: match.metadata?.section,
-        page: match.metadata?.page,
+        title: String(match.metadata?.title || ''),
+        section: String(match.metadata?.section || ''),
+        page: Number(match.metadata?.page) || 0,
       }
     }))
 
