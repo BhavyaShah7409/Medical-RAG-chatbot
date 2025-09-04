@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 min-h-screen;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-xl bg-white/70 border border-white/30 shadow-xl;
+  }
+
+  .medical-gradient {
+    @apply bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500;
+  }
+
+  .btn-primary {
+    @apply medical-gradient text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply glass-card hover:bg-white/80 text-slate-700 font-medium py-2.5 px-4 rounded-lg transition-all duration-200 hover:shadow-md;
+  }
+
+  .sidebar-nav-item {
+    @apply w-full text-left px-4 py-3 text-slate-600 hover:text-slate-900 hover:bg-white/60 rounded-xl transition-all duration-200 flex items-center space-x-3 group;
+  }
+
+  .chat-bubble-user {
+    @apply medical-gradient text-white rounded-2xl rounded-br-md px-5 py-4 max-w-2xl shadow-lg;
+  }
+  
+  .chat-bubble-assistant {
+    @apply glass-card rounded-2xl rounded-bl-md px-5 py-4 max-w-2xl text-slate-800;
+  }
+
+  .input-field {
+    @apply glass-card rounded-2xl px-6 py-4 text-slate-800 placeholder-slate-500 border-0 focus:ring-2 focus:ring-teal-400/50 focus:outline-none transition-all duration-200;
+  }
+
+  .quick-chip {
+    @apply glass-card hover:bg-white/80 text-slate-700 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:shadow-md hover:scale-105;
+  }
+
+  .medical-icon {
+    @apply w-5 h-5 text-teal-500;
+  }
+
+  .status-indicator {
+    @apply w-2 h-2 rounded-full bg-emerald-400 animate-pulse;
+  }
+
+  .floating-element {
+    @apply transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-slate-800 via-slate-700 to-slate-600 bg-clip-text text-transparent;
+  }
+
+  .medical-text-gradient {
+    @apply bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent;
+  }
+
+  .blur-backdrop {
+    @apply backdrop-blur-2xl bg-white/10;
+  }
+  
+  .source-card {
+    @apply bg-gray-50 border border-gray-200 rounded-lg p-3 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200;
+  }
+}
