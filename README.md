@@ -1,3 +1,5 @@
+<img width="1887" height="855" alt="Image" src="https://github.com/user-attachments/assets/8e752974-62c6-4059-80de-0e8cd6d87c92" />
+
 # Health Vector - AI Medical Encyclopedia
 
 A modern Next.js application that combines RAG (Retrieval-Augmented Generation) technology with AI to create an intelligent medical encyclopedia chatbot.
