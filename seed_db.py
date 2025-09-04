@@ -92,3 +92,4 @@ for i in range(0, len(vectors), BATCH_SIZE):
     index.upsert(batch)
 
 print("[Done] PDF text seeded into Pinecone successfully.")
+
