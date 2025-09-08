@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { Send, Save, Mic, Sparkles } from 'lucide-react'
 
 interface ChatInputProps {
@@ -46,11 +45,9 @@ export default function ChatInput({
   return (
     <div className="w-full max-w-5xl mx-auto p-6">
       {/* Input Form */}
-      <motion.form 
+      <form 
         onSubmit={handleSubmit} 
         className="glass-card rounded-2xl p-4 shadow-xl"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
       >
         <div className="flex items-center space-x-4">
           <div className="flex-1 relative">
@@ -66,29 +63,25 @@ export default function ChatInput({
           
           <div className="flex items-center space-x-2">
             {showSaveButton && onSaveSession && (
-              <motion.button
+              <button
                 type="button"
                 onClick={onSaveSession}
-                className="btn-secondary p-3"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                className="btn-secondary p-3 hover:scale-105 transition-transform duration-200"
               >
                 <Save className="h-5 w-5" />
-              </motion.button>
+              </button>
             )}
             
-            <motion.button
+            <button
               type="submit"
               disabled={disabled || !input.trim()}
-              className="btn-primary p-3 disabled:opacity-50 disabled:cursor-not-allowed"
-              whileHover={{ scale: disabled || !input.trim() ? 1 : 1.05 }}
-              whileTap={{ scale: disabled || !input.trim() ? 1 : 0.95 }}
+              className="btn-primary p-3 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 transition-transform duration-200"
             >
               <Send className="h-5 w-5" />
-            </motion.button>
+            </button>
           </div>
         </div>
-      </motion.form>
+      </form>
     </div>
   )
 }

@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 
 import Footer from '@/components/Footer'
 import ChatMessage from '@/components/ChatMessage'
@@ -219,19 +218,9 @@ export default function Home() {
           
           <div className="flex-1 overflow-y-auto">
             {messages.length === 0 ? (
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="h-full flex items-center justify-center px-6"
-              >
+              <div className="h-full flex items-center justify-center px-6">
                 <div className="text-center max-w-3xl">
-                  <motion.div
-                    initial={{ scale: 0.8 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-                    className="glass-card p-12 rounded-3xl shadow-2xl"
-                  >
+                  <div className="glass-card p-12 rounded-3xl shadow-2xl">
                     <div className="p-4 rounded-2xl mx-auto mb-6 flex items-center justify-center">
                       <HealthVectorLogo size={200} className="text-white" />
                     </div>
@@ -245,9 +234,9 @@ export default function Home() {
                       Get evidence-based health information powered by advanced AI. 
                       Ask questions about symptoms, conditions, treatments, and wellness.
                     </p>
-                  </motion.div>
+                  </div>
                 </div>
-              </motion.div>
+              </div>
             ) : (
               <div className="space-y-4 px-6 py-8">
                 {messages.map((message, index) => (
