@@ -13,8 +13,8 @@ A modern Next.js application that combines RAG (Retrieval-Augmented Generation) 
 
 ## Tech Stack
 
-- **Frontend**: Next.js 14, React, TypeScript
-- **Styling**: Tailwind CSS, Framer Motion
+- **Frontend**: Next.js, React, TypeScript
+- **Styling**: Tailwind CSS
 - **Authentication**: Supabase Auth
 - **Database**: Supabase (PostgreSQL)
 - **Vector Database**: Pinecone
